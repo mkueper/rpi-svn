@@ -12,4 +12,3 @@ VOLUME /var/svn
 EXPOSE 3690:3690
 
 CMD svnserve -d -r /var/svn/ --log-file /dev/stdout --foreground
-
