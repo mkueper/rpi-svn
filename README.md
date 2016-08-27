@@ -1,6 +1,6 @@
 # docker rpi-svn, a simple raspberry pi subversion container
 
-Runs a small subversion server (svnserve), based on hypriot/rpi-alpine-scratch
+Runs a small subversion server (svnserve), based on [hypriot/rpi-alpine-scratch](https://github.com/hypriot/rpi-alpine-scratch)
 
 ### Create image and conatiner with Script file
 - The script `build.sh` creates a image from Dockerfile with the tag mkueper/rpi-svn.
