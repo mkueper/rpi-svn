@@ -1,12 +1,17 @@
 # docker rpi-svn, a simple raspberry pi subversion container
 
-runs subversion server (svnserve), based on hypriot/rpi-alpine-scratch
+Runs a small subversion server (svnserve), based on hypriot/rpi-alpine-scratch
 
-create container and store data outside of the container run:
+Create the container and store the data outside of your container run:
 ```
 docker run -d -p 3690:3690 -v /data/path:/var/svn --name server-name mkueper/rpi-svn
 ```
 
-sample files in folder systemd and upstart to start container on startup
-replace container name mk-svn with your container name.
+### Startup Scripts
+In folders systemd and upstart ypou could find sample files to start the container on rpi startup.
+Replace the container name `mk-svn` with your own container name.
 
+### Script file
+- The script build.sh creates a container from Dockerfile with the tag mkueper/rpi-svn.
+- The script run.sh needs two arguments. The first argument is a name for the container (e.g. mk-svn). The second argument is the path where the date schould stored.
+- 
