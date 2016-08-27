@@ -1,0 +1,12 @@
+[Unit]
+Description=Subversion container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a mk-svn
+ExecStop=/usr/bin/docker -t 2 mk-svn
+
+[Install]
+WantedBy=default.target
