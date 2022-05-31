@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine-scratch
+FROM alpine
 MAINTAINER Michael Kueper <michael@kueper-datentechnik.de>
 
 LABEL version latest
