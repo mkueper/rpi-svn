@@ -1,6 +1,6 @@
 # docker rpi-svn, a simple raspberry pi subversion container
 
-Runs a small subversion server (svnserve), based on [hypriot/rpi-alpine-scratch](https://github.com/hypriot/rpi-alpine-scratch)
+Runs a small subversion server (svnserve) based on Alpine [Docker official Apline image]("https://hub.docker.com/_/alpine)
 
 ### Create an image and an conatiner with Script files
 - The script `build.sh` creates a image from Dockerfile with the tag `mkueper/rpi-svn`.
@@ -18,3 +18,4 @@ docker run -d -p 3690:3690 -v /data/path:/var/svn --name server-name mkueper/rpi
 ```
 
 > You can edit the config files (svnserve.conf, passwd, authz and hooks-env.tmpl) with an editor in the subversion data directory on your host.
+
