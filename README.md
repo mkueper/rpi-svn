@@ -12,9 +12,6 @@ Create the container and store the data outside of your container run:
 docker run -d -p 3690:3690 -v /data/path:/var/svn --name server-name mkueper/rpi-svn
 ```
 
-### Sample Startup Scripts
-In the folders systemd and upstart you can find sample files for starting the container on system start. Replace the container name `mk-svn` with your container name.
-
 ### Create a new repository
 ```
   docker exec -it your-container-name svnadmin create /var/svn/repo-name
