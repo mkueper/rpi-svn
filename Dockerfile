@@ -1,14 +1,13 @@
-FROM alpine
-MAINTAINER Michael Kueper <michael@kueper-datentechnik.de>
-
-LABEL version latest
-LABEL description Simple Subversion Container
+FROM alpine:3.19
+LABEL maintainer="Michael Kueper <michael@kueper-datentechnik.de>"
+LABEL version="latest"
+LABEL description="Simple Subversion Container"
 
 RUN apk update \
-    && apk upgrade \
-    && apk add subversion
+    && apk add subversion \
+    && rm -rf /var/cache/apk/*
 
 VOLUME /var/svn
-EXPOSE 3690:3690
+EXPOSE 3690
 
 CMD svnserve -d -r /var/svn/ --log-file /dev/stdout --foreground
